@@ -1,0 +1,17 @@
+---
+- name: Provision base-ami
+  hosts: all
+  gather_facts: yes
+  become: yes
+
+  vars_files:
+    - ./variables/variables.yml
+
+  tasks:
+    - import_tasks: tasks/base-ami.yml
+    - name: Role | Docker
+      import_role:
+        name: artis3n.docker
+
+  handlers:
+    - import_tasks: handlers/reboot.yml

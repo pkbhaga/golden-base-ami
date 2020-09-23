@@ -1,2 +1,2 @@
-# golden-base-ami
-This Repo defines a golden base ami and create a Autoscaling group
+# build-golden-ami
+Repo to Build Golden AMI
