@@ -4,7 +4,7 @@ name: CI
 on: [pull_request]
 
 jobs:
-  Packer CI:
+  Packer:
     runs-on: ubuntu-latest
 
     steps:
@@ -27,7 +27,7 @@ jobs:
       - name: packer-inspect
         run: packer inspect base-ami/ami.json
 
-  Terraform CI:
+  Terraform:
     runs-on: ubuntu-latest
 
     steps:
